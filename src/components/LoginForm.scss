@@ -1,0 +1,47 @@
+@import '../styles/mixins.scss';
+
+.login-gorm-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login-form {
+    border-radius: 10%;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    padding: 20px;
+    @include boxShadow;
+    text-align: center;
+
+    p {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: rgb(119, 187, 119);
+      font-weight: bold;
+      font-size: 18px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 16px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+        color: white;
+      }
+
+      &:active {
+        @include boxShadow;
+      }
+    }
+  }
+}

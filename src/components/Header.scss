@@ -1,0 +1,16 @@
+.header {
+  background-color: rgb(119, 187, 119); 
+  width: 100%;
+  padding: 6px; 
+  display: 'flex'; 
+  justify-content: 'space-between';
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
