@@ -1,4 +1,4 @@
-@import '../styles/mixins.scss';
+@import '../../styles/mixins.scss';
 
 .input-wrapper {
   margin-bottom: 20px;
@@ -14,12 +14,12 @@
     outline: none;
     width: 100%;
     border: none;
+    border-radius: 4px;
     @include boxShadow;
   }
 
   .error {
     color: red;
-    border-radius: 6px;
     margin-top: 5px;
   }
 }

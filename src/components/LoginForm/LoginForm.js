@@ -1,11 +1,10 @@
 import { Formik, Form } from "formik";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { withRouter } from "react-router-dom";
 import * as yup from "yup";
-import { changePasswordInput, changeUsernameInput, login } from "../redux/actions/index.js";
-import InputElement from "./InputElement.jsx";
-import './LoginForm.scss';
+import { changePasswordInput, changeUsernameInput, login } from "../../store/actions/index.js";
+import InputElement from "../InputElement";
+import './styles.scss';
 
 const loginSchema = yup.object().shape({
   username: yup
@@ -18,7 +17,7 @@ const loginSchema = yup.object().shape({
     .min(6, "Password is too short - should be 6 chars minimum.")
 });
 
-function LoginForm({ history }) {
+export function LoginForm({ history }) {
   const authenticated = useSelector(state => state.authenticated);
   const username = useSelector(state => state.username);
   const password = useSelector(state => state.password);
@@ -71,5 +70,3 @@ function LoginForm({ history }) {
     </Formik>
   );
 }
-
-export default withRouter(LoginForm);

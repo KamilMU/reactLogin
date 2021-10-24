@@ -1,4 +1,4 @@
-@import '../styles/mixins.scss';
+@import '../../styles/mixins.scss';
 
 .login-gorm-wrapper {
   height: 100vh;
@@ -9,7 +9,7 @@
   align-items: center;
 
   .login-form {
-    border-radius: 10%;
+    border-radius: 8px;
     max-width: 400px;
     width: 100%;
     background-color: rgb(243, 243, 243);

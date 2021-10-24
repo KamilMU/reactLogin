@@ -1,8 +1,8 @@
 import React from 'react';
 import { ErrorMessage, Field } from "formik";
-import './InputElement.scss';
+import './styles.scss';
 
-export default function InputElement({
+export function InputElement({
   labelName,
   type,
   value,

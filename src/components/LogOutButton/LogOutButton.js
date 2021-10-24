@@ -1,10 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { withRouter } from 'react-router';
-import { logout } from '../redux/actions';
-import './LogOutButton.scss';
+import { logout } from '../../store/actions';
+import './styles.scss';
 
-function LogOutButton({ history }) {
+export function LogOutButton({ title, history }) {
   const dispatch = useDispatch();
 
   return (
@@ -14,9 +13,7 @@ function LogOutButton({ history }) {
         dispatch(logout());
         history.push('/');
       }}>
-      <span>Выйти</span>
+      <span>{title}</span>
     </div>
   )
 }
-
-export default withRouter(LogOutButton);
