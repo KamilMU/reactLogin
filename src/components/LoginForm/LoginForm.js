@@ -34,10 +34,11 @@ export function LoginForm({ history }) {
         password: password
       }}
       validationSchema={loginSchema}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
           dispatch(login(username, password));
           setSubmitting(false);
+          resetForm({ values: '' });
         }, 100);
       }}
     >
